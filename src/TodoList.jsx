@@ -15,13 +15,13 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.css";
 
-function TodoList() {
+function TodoList({ todos, setTodos }) {
   const [todo, setTodo] = useState({
     description: "",
     priority: "",
     date: null,
   });
-  const [todos, setTodos] = useState([]);
+
   const gridRef = useRef();
 
   // Määritetään AG-Gridin taulukon sarakkeet
