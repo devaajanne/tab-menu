@@ -61,6 +61,8 @@ function TodoList() {
       alert("A todo cannot be empty.");
     } else if (todo.priority == "") {
       alert("A todo must have a priority.");
+    } else if (todo.date == null) {
+      alert("A todo must have a date.");
     } else {
       setTodos([...todos, todo]);
       setTodo({ ...todo, description: "", priority: "", date: null });
